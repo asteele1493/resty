@@ -5,6 +5,7 @@ form {
   display: inline-block;
   margin: auto;
   width: 200px;
+  font-family:Arial, Helvetica, sans-serif;
 
   label {
     display: flex;
@@ -15,10 +16,10 @@ form {
         cursor: pointer;
         margin-right: 1rem;
         padding: .25rem .5rem;
-        background: #ccc;
+        background: #b88632;
 
         &:hover, &.active {
-          background: #fff;
+          background: #e4b23c7d;
         }
       }
     }
