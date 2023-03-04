@@ -1,27 +1,27 @@
 import React from 'react';
-
 import './App.scss';
-
-// Let's talk about using index.js and some other name in the component folder.
-// There's pros and cons for each way of doing this...
-// OFFICIALLY, we have chosen to use the Airbnb style guide naming convention. 
-// Why is this source of truth beneficial when spread across a global organization?
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Results from './Components/Results';
+//import { useState, useCallback } from 'react';
 
-class App extends React.Component {
+//Syntax: Authorization: Bearer YOUR_API_KEY
+//Syntax: organization: YOUR_API_KEY
 
-  constructor(props) {
+export interface RequestParams {url: string, method: string}
+
+class App extends React.Component <{},{data: unknown, requestParams: RequestParams}> {
+
+  constructor(props: {}) {
     super(props);
     this.state = {
       data: null,
-      requestParams: {},
+      requestParams: {url:"", method:"GET"},
     };
   }
 
-  callApi = (requestParams) => {
+  callApi = (requestParams: RequestParams) => {
     // mock output
     const data = {
       count: 2,
