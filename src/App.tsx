@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Results from './Components/Results';
+import { OpenAI } from './Components/OpenAI';
 //import { useState, useCallback } from 'react';
 
 //Syntax: Authorization: Bearer YOUR_API_KEY
@@ -37,10 +38,13 @@ class App extends React.Component <{},{data: unknown, requestParams: RequestPara
     return (
       <React.Fragment>
         <Header />
+        <main>
+        <OpenAI />
         <div>Request Method: {this.state.requestParams.method}</div>
         <div>URL: {this.state.requestParams.url}</div>
         <Form handleApiCall={this.callApi} />
         <Results data={this.state.data} />
+        </main>
         <Footer />
       </React.Fragment>
     );
