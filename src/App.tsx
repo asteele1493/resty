@@ -18,6 +18,12 @@ class App extends React.Component <{},{data: unknown, requestParams: RequestPara
     super(props);
     this.state = {
       data: null,
+
+      //lab 28 TODO: track api calls in reducer function, res.headers & results
+      //In <App/>, use reducer to store and manage all app state: loading, results, history
+      //Add to history arr in state after every api call: method, url, results.json
+
+      //<History/> component: iterates the history array in state and shows previous api calls.
       requestParams: {url:"", method:"GET"},
     };
   }

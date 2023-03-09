@@ -33,7 +33,7 @@ const makeOpenAiRequest = async (content: string): Promise<string> => {
 
 export const OpenAI = () => {
   const [prompt, setPrompt] = useState(
-    "What's the best pizza topping of all time?"
+    "How do you do a broad back adjustment in sewing?"
   );
   const [chat, setChat] = useState("");
 
